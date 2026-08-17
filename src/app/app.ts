@@ -4,7 +4,7 @@ import { TodoList } from './todo-list/todo-list';
 
 @Component({
   selector: 'app-root',
-  imports: [AddItem],
+  imports: [AddItem, TodoList],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
