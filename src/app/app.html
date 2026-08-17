@@ -3,5 +3,5 @@
 
   <app-add-item (newTodo)="addTodo($event)"></app-add-item>
 
-  <app-todo-list></app-todo-list>
+  <app-todo-list [todoList]="todos" (todoDeleted)="handleDeletedTodo($event)"></app-todo-list>
 </main>

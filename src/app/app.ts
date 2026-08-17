@@ -16,7 +16,10 @@ export class App {
   addTodo(newTodo: string) {
     if (newTodo) {
       this.todos.push(newTodo);
-      console.log(this.todos);
     }
+  }
+
+  handleDeletedTodo(index: number) {
+    this.todos.splice(index, 1);
   }
 }

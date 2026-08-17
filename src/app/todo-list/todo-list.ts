@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-todo-list',
@@ -6,4 +6,12 @@ import { Component } from '@angular/core';
   templateUrl: './todo-list.html',
   styleUrl: './todo-list.css',
 })
-export class TodoList {}
+export class TodoList {
+  @Input() todoList: string[] = [];
+
+  @Output() todoDeleted = new EventEmitter<number>();
+
+  delete(index: number) {
+    this.todoDeleted.emit(index);
+  }
+}
