@@ -16,6 +16,7 @@ export class App {
   addTodo(newTodo: string) {
     if (newTodo) {
       this.todos.push(newTodo);
+      console.log(this.todos);
     }
   }
 

@@ -14,9 +14,11 @@ export class AddItem {
 
   submitTodo() {
     const task = this.newTask.value?.trim();
+    console.log('submit');
 
     if (task) {
       this.newTodo.emit(task);
+      // console.log(task);
       this.newTask.setValue('');
     }
   }
