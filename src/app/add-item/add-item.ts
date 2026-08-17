@@ -17,7 +17,6 @@ export class AddItem {
 
     if (task) {
       this.newTodo.emit(task);
-      console.log(task);
       this.newTask.setValue('');
     }
   }

@@ -10,4 +10,13 @@ import { TodoList } from './todo-list/todo-list';
 })
 export class App {
   protected readonly title = signal('angular-app');
+
+  todos: string[] = [];
+
+  addTodo(newTodo: string) {
+    if (newTodo) {
+      this.todos.push(newTodo);
+      console.log(this.todos);
+    }
+  }
 }
